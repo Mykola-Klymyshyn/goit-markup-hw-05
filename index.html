@@ -127,22 +127,28 @@
               </div>
             </li>
             <li class="specifics-item">
-              <img
-                class="specifics-img"
-                src="./images/img2.jpg"
-                alt="фото адаптивної верстки"
-                width="370"
-                height="294"
-              />
+              <div class="specifics-relative">
+                <img
+                  class="specifics-img"
+                  src="./images/img2.jpg"
+                  alt="фото адаптивної верстки"
+                  width="370"
+                  height="294"
+                />
+                <p class="specifics-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="specifics-item">
-              <img
-                class="specifics-img"
-                src="./images/img3.jpg"
-                alt="фото вибору дизайну"
-                width="370"
-                height="294"
-              />
+              <div class="specifics-relative">
+                <img
+                  class="specifics-img"
+                  src="./images/img3.jpg"
+                  alt="фото вибору дизайну"
+                  width="370"
+                  height="294"
+                />
+                <p class="specifics-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -445,7 +451,11 @@
     </footer>
     <div class="backdrope is-hidden" data-modal>
       <div class="modal">
-        <button type="button" data-modal-close>Закрити</button>
+        <button type="button" class="modal-button-close" data-modal-close>
+          <svg class="modal-position-btn" widht="32" higth="32">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
       </div>
     </div>
     <script src="./js/modal.js"></script>
