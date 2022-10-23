@@ -23,6 +23,7 @@ body {
   font-style: normal;
   color: var(--primary-text-color);
   font-family: var(--font-family-primary);
+  padding-top: 80px;
 }
 html {
   box-sizing: border-box;
@@ -267,7 +268,7 @@ img {
   color: var(--color-accent);
 }
 
-/* Почfток розмітки Flex*/
+/* Початок розмітки Flex*/
 .container {
   width: 100%;
   max-width: 1230px;
@@ -517,4 +518,70 @@ img {
 .team-link:focus {
   fill: var(--color-white);
   background-color: var(--color-accent);
+}
+/* HW-05 */
+.specifics-relative {
+  position: relative;
+}
+.specifics-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--color-white);
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-relative {
+  position: relative;
+}
+/* .portfolio-relative::before {
+} */
+.portfolio-tex-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 24px;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: var(--color-white);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-white);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+/* Add modal */
+.backdrope {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrope.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 580px;
+  min-width: 530px;
+  background-color: var(--color-white);
 }

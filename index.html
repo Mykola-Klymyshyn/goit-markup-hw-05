@@ -56,7 +56,7 @@
       <section class="hero">
         <div class="container hero-flex">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-button" type="button">Замовити послугу</button>
+          <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
       <section class="features section">
@@ -115,13 +115,16 @@
           <h2 class="specifics-title">Чим ми займаємося</h2>
           <ul class="specifics-list list-reset">
             <li class="specifics-item">
-              <img
-                class="specifics-img"
-                src="./images/img1.jpg"
-                alt="фото верстки сайту"
-                width="370"
-                height="294"
-              />
+              <div class="specifics-relative">
+                <img
+                  class="specifics-img"
+                  src="./images/img1.jpg"
+                  alt="фото верстки сайту"
+                  width="370"
+                  height="294"
+                />
+                <p class="specifics-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="specifics-item">
               <img
@@ -440,5 +443,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrope is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" data-modal-close>Закрити</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
