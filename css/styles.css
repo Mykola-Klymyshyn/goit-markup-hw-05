@@ -66,19 +66,20 @@ img {
   color: var(--primary-text-color);
 }
 .menu-link {
-  /* position: relative; */
+  position: relative;
   font-weight: 500;
   text-decoration: none;
   color: var(--primary-text-color);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
 .menu-link.current {
   color: var(--color-accent);
+  transition: color var(--transition-duration) var(--transition-timing-function);
 }
-.menu-link::after {
+.menu-link.current::after {
   position: absolute;
   content: '';
   width: 100%;
@@ -86,7 +87,7 @@ img {
   border-radius: 2px;
   background-color: var(--color-accent);
   left: 0;
-  bottom: 0;
+  bottom: -33px;
 }
 .menu .menu-link:hover,
 .menu .menu-link:focus {
@@ -144,8 +145,7 @@ img {
   border: none;
   padding: 10px 32px;
   border-radius: 4px;
-  transition: color var(--transition-duration) var(--transition-timing-function),
-    background-color var(--transition-duration) var(--transition-timing-function),
+  transition: background-color var(--transition-duration) var(--transition-timing-function),
     box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .hero-button:hover,
@@ -240,7 +240,7 @@ img {
   padding: 6px 22px;
   border-radius: 4px;
   transition: color var(--transition-duration) var(--transition-timing-function),
-    background-colorvar(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function),
     box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .portfolio-radio-btn:hover,
@@ -412,7 +412,7 @@ img {
 .portfolio-link {
   text-decoration: none;
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow var(--transition-duration) var(--transition-timing-function);
 }
 .portfolio-link:hover,
 .portfolio-link:focus {
@@ -605,27 +605,26 @@ img {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity var(--transition-duration) var(--transition-timing-function);
-  animation-name: visibility;
+  transition: opacity var(--transition-duration) var(--transition-timing-function),
+    visibility var(--transition-duration) var(--transition-timing-function);
 }
 .backdrope.is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition-duration: 250ms;
 }
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: scale(1) translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   min-height: 580px;
   min-width: 530px;
   background-color: var(--color-white);
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
-.backdrope.is-hidden.modal {
-  transform: scale(0.9) translate(-50%, -50%);
+.backdrope.is-hidden .modal {
+  transform: scale(1.5) translate(-50%, -50%);
 }
 
 .modal-button-close {
