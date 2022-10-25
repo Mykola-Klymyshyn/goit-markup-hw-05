@@ -623,7 +623,7 @@ img {
   transition: transform var(--transition-duration) var(--transition-timing-function);
 }
 .backdrope.is-hidden .modal {
-  transform: scale(1.5) translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
 .modal-button-close {
